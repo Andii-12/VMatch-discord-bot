@@ -1,0 +1,23 @@
+{
+  "name": "valorant-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for Valorant custom matchmaking with MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node test-connection.js",
+    "setup": "node setup-bot.js"
+  },
+  "keywords": ["discord", "bot", "valorant", "matchmaking", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "mongoose": "^8.0.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
