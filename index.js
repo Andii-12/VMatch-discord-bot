@@ -527,7 +527,15 @@ client.once('ready', async () => {
   
   // Register slash commands
   try {
-    await client.application.commands.set(commands, process.env.GUILD_ID);
+    // Register globally first
+    await client.application.commands.set(commands);
+    console.log('Slash commands registered globally');
+    
+    // Also register for specific guild
+    if (process.env.GUILD_ID) {
+      await client.application.commands.set(commands, process.env.GUILD_ID);
+      console.log('Slash commands registered for guild');
+    }
     console.log('Slash commands registered successfully');
   } catch (error) {
     console.error('Error registering slash commands:', error);
