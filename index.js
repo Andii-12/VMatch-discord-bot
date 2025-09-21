@@ -5,6 +5,19 @@ const Player = require('./models/Player');
 const Match = require('./models/Match');
 const Queue = require('./models/Queue');
 
+// Validate environment variables
+const requiredEnvVars = ['DISCORD_TOKEN', 'CLIENT_ID', 'GUILD_ID', 'MONGODB_URI'];
+const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);
+
+if (missingVars.length > 0) {
+  console.error('❌ Missing required environment variables:');
+  missingVars.forEach(varName => console.error(`   - ${varName}`));
+  console.error('\nPlease set all required environment variables in Railway dashboard.');
+  process.exit(1);
+}
+
+console.log('✅ All required environment variables found');
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,

@@ -7,7 +7,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "node test-connection.js",
-    "setup": "node setup-bot.js"
+    "setup": "node setup-bot.js",
+    "railway:start": "node index.js"
   },
   "keywords": ["discord", "bot", "valorant", "matchmaking", "mongodb"],
   "author": "",

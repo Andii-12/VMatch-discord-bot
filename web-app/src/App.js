@@ -32,7 +32,7 @@ function App() {
   ];
 
   const generateInviteLink = () => {
-    const clientId = 'YOUR_CLIENT_ID_HERE'; // Replace with your bot's client ID
+    const clientId = '1419196946198827088'; // Your bot's client ID
     const permissions = '8'; // Administrator permission
     const scope = 'bot%20applications.commands';
     
